@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
     sk: process.env.STRIPE_KEY,
   });
 });
-
+// {payment part}
 app.post("/payment/create", async (req, res) => {
   const total = parseInt(req.query.total);
   if (total > 0) {
